@@ -86,9 +86,10 @@ public class BookResource {
     @Timed(name = "update-book-status")
     public Response updateBookStatus(@PathParam("isbn") LongParam isbn,
 	    @DefaultValue("available") @QueryParam("status") Status status) {
+    System.out.println("@@@@@@requested status:: "+status);
 	Book book = bookRepository.getBookByISBN(isbn.get());
 	book.setStatus(status);
-
+	System.out.println("******new status:: "+book.getStatus());
 	BookDto bookResponse = new BookDto(book);
 	String location = "/books/" + book.getIsbn();
 	bookResponse.addLink(new LinkDto("view-book", location, "GET"));

@@ -1,0 +1,33 @@
+!SESSION 2014-04-09 23:23:42.348 -----------------------------------------------
+eclipse.buildId=3.5.0.201402030851-M2-e43
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -data /home/rohan/CMPE-273-Assignments/lab5/cmpe273-lab5 -os linux -ws gtk -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-04-09 23:24:02.888
+!MESSAGE Result of converting legacy STS 2.x workspace preferences to 3.x
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-04-09 23:24:02.888
+!MESSAGE Converted legacy STS plugin preferences
+!SUBENTRY 1 unknown 0 0 2014-04-09 23:24:02.888
+!MESSAGE OK
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-04-09 23:24:02.888
+!MESSAGE Converted legacy Roo plugin state locations
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-04-09 23:24:02.888
+!MESSAGE Converted legacy STS plugin state locations
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-04-09 23:25:30.798
+!MESSAGE CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-04-09 23:25:30.801
+!MESSAGE CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-04-09 23:25:30.801
+!MESSAGE CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subclipse does not contain lifecycle mapping metadata
+
+!ENTRY org.eclipse.wst.jsdt.core 4 969 2014-04-10 00:38:34.136
+!MESSAGE app.js [in  [in /home/rohan/CMPE-273-Assignments/lab5/cmpe273-lab5/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/system.js]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-04-10 00:52:25.649
+!MESSAGE Failed to open search index.
