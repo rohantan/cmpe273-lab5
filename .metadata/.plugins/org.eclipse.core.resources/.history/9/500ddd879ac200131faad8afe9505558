@@ -1,0 +1,45 @@
+
+/* $(document).ready(function(){
+	 alert("document ready");
+    var rowelements = $('td[title="status"]');
+    for( i=0; i<rowelements.length; i++ ){
+    	if(rowelements[i].innerHTML == "lost")
+    		{
+    			$("#"+rowelements[i].id.slice("6")).attr("disabled","disabled");
+    		}
+    }
+});*/
+ $(document).ready(function(){
+	alert("document ready");
+    var rowelements = $('td[title="status"]');
+    for( i=0; i<rowelements.length; i++ ){
+    	var statusIs = rowelements[i].innerHTML;
+    	var elementId = "#"+rowelements[i].id.slice("6");
+    	if(statusIs == "lost")
+    		{
+    			$(elementId).attr("disabled","disabled");
+    		}
+    }
+});
+
+$(":button").click(function() {
+    var isbn = this.id;
+    var apiuri="/library/v1/books/"+isbn+"?status=lost"
+    alert('About to report lost on ISBN ' + isbn);
+    $.ajax({
+  	  url: apiuri,
+  	  type: 'PUT',
+  	  contentType: "application/json",
+  	  dataType: 'json',
+  	  success: function(html){
+  		$("#status"+isbn).text("lost");
+  	  $("#"+isbn).attr('disabled', 'disabled');
+      },  	  
+  	  error: errorAlert
+  });
+});
+
+function errorAlert(e, jqxhr)
+{
+	alert("Your request was not successful: " + jqxhr);
+}

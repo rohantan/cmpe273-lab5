@@ -1,18 +1,18 @@
 $(":button").click(function() {
-    var isbn = this.id;
-    alert('About to report lost on ISBN ' + isbn);
-    $.ajax({
-  	  url: 'http://localhost:8001/library/v1/books/'+isbn,
-  	  type: 'PUT',
-  	  contentType: "application/json",
-  	  data: JSON.stringify({"status" : "lost"}),
-  	  dataType: 'json',
-  	  success: function(html){
-  	  location.reload();
-  	  $("#"+isbn).attr('disabled', 'disabled');
-      },  	  
-  	  error: errorAlert
-  });
+	var isbn = this.id;
+	var apiuri="/library/v1/books/"+isbn+"?status=lost"
+	alert('About to report lost on ISBN ' + isbn);
+	$.ajax({
+		url: apiuri,
+		type: 'PUT',
+		contentType: "application/json",
+		dataType: 'json',
+		success: function(html){
+			$("#status"+isbn).text("lost");
+			$("#"+isbn).attr('disabled', 'disabled');
+		},  	  
+		error: errorAlert
+	});
 });
 
 function errorAlert(e, jqxhr)
